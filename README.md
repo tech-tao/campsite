@@ -1,7 +1,7 @@
 # campsite
 A demo project for an interview
 
-** About the design **
+# About the design
 In this design, I didn't implement a complicated structure to handle real high volume calls, I only used
 a lock to make sure there would be no conflicts on the reseravtion date range. But I have several thoughts
 about the improvements:
@@ -32,7 +32,7 @@ than write requests, so we could have these services separated and sync between 
 
 
 
-** The table structure I used **
+# The table structure
 CREATE TABLE `campsite`.`reservation` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
