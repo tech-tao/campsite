@@ -122,6 +122,7 @@ public class ReservationServiceImpl implements ReservationService {
         newReservation.setEndTo(Date.from(endTo.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 
         try {
+            // This doesn't work, will rework on this later
             if (updateLock.tryLock(5, TimeUnit.SECONDS)) {
                 reservationRepository.delete(reservation);
                 List<Reservation> reservations =
